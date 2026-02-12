@@ -1,13 +1,14 @@
-#include<string>
-#include<iostream>
-#include<cmath> 
-int biTOdec(std::string &input){
+#include <string>
+#include "helperFunctions.h"
+//#include<iostream>
 
-    int value = 0;
+unsigned char biTOdec(std::string &input){
+
+    unsigned char value = 0;
 
     for (char c : input) {
-    value = value * 2 + (c - '0');
-}
-    std::cout << value << "\n";
+        value = value * 2 + (c - '0');
+    }
+    //std::cout << value << "\n";
     return value;
 }
