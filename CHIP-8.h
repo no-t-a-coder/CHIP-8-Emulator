@@ -1,7 +1,9 @@
+#pragma once
+
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "helperFunctions.cpp"
+
 
 class CHIP8{
     unsigned short pc;
@@ -13,7 +15,10 @@ class CHIP8{
     unsigned char V[16];
     unsigned short stack[16];
 
+
+public:
     void initialize();
-    void load_opcode();
+    void load_program(std::string argfile);
+    void FDE();
 
 };
