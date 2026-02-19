@@ -1,0 +1,15 @@
+opcode.bin pseudo code (OPcode for drawing character 0-F on the screen)
+V0 = 0 //number
+V1 = 0 //x Coordinate
+V2 = 0 //y coordinate
+Load Number into I
+Draw first Number
+V1 += 5
+V0 += 1
+Skip next instruction if V0 != 8
+V2 += 6
+Skip next instruction if V0 != 8
+V1 = 0
+Skip next instruction if V0 != 16
+Jmp to inf loop aka to self
+Jmp to Draw
